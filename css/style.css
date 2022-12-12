@@ -1,0 +1,324 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgb(19, 19, 19);
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+.wrap{
+    width: 100%;
+    min-width: 1200px;
+}
+
+.header{
+    height: 80px;
+    /* background-color: rgb(211, 234, 255); */
+}
+
+.headerin{
+    width: 1200px;
+    height: 80px;
+    /* background-color: rgb(255, 226, 188); */
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a{
+    width: 138px;
+    height: 20px;
+    background-color: aqua;
+    display: block;
+    background-image: url(../img/logo.gif);
+    text-indent: -999999px;
+}
+
+.gnb ul{
+    display: flex;
+}
+
+.gnb li{
+    margin-right: 50px;
+}
+
+/* 
+    a태그의 글자색은 반드시 a태그에서 변경해야함
+*/
+
+.gnb li a{
+    color: rgb(19, 19, 19);
+    font-size: 18px;
+}
+
+.gnb li a:hover{
+    color: red;
+}
+
+.member ul{
+    display: flex;
+}
+
+.member li{
+    margin-left: 15px;
+}
+
+.member li a{
+    color: rgb(19, 19, 19); 
+}
+
+.member li a:hover{
+    text-decoration: underline;
+}
+
+.member .btnSc a{
+    display: block;
+    width: 22px;
+    height: 20px;
+    background-image: url(../img/icon_search.png);
+    text-indent: -999999px;
+    background-repeat: no-repeat;
+}
+
+.member .btnCart a{
+    display: block;
+    width: 22px;
+    height: 20px;
+    background-image: url(../img/icon_cart.png);
+    text-indent: -999999px;
+    background-repeat: no-repeat;
+}
+
+.main1{
+    height: 480px;
+    /* background-color: aqua; */
+    margin-bottom: 50px;
+    position: relative;
+    /* .main1의 공간 밖의 내용을 보이지 않게 설정함  */
+    overflow: hidden;
+}
+
+.main1img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -800px;
+}
+
+/* 
+    * .main1img의 이미지 너비값이 안전사이즈보다 넓음.
+    * 그래서 강제로 가운데 배치하기 위해서 position : absolute를 사용함.
+    * .main의 하나뿐인 자식인 .main1img가 absolute처리가 되면
+        세로 높이 값이 0으로 처리가 되므로
+        .main1에서 사용할 만큼의 높이값을 강제로 입력함
+    * 브라우저의 너비보다 더 큰 이미지 대문에 아래쪽에 스크롤이 생기므로
+        이를 정리하기 위해서 .main1에 overflow: hidden; 을 설정함.
+    * 안전사이즈보다 브라우저의 크기가 작아질 경우
+        .main1img의 이미지가 잘려서 표시가 되므로
+        전체 영역의 최소 너비값(min-width)을 안전사이즈의 너비로 고정함.
+*/
+
+.main2{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main3{
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.main3 h2{
+    margin-bottom: 20px;
+    /* 
+        css를 시작할때 body태그에 적용한 기본 줄높이가 20px임
+        폰트의 기본 높이값 = 줄높이 
+        폰트 사이즈가 더 커지면 글자가 위,아래의 영역과 겹쳐지므로
+        줄높이도 같이 수정해야함.
+    */
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.main3 .h2 span{
+    font-weight: normal;
+}
+
+.main3 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main3 ul li{
+    width: 285px;
+    text-align: center;
+}
+
+.main3 li .itemImg{
+    border: 1px solid gray;
+    margin-bottom: 15px;
+}
+
+.main3 ul li .itemImg img{
+    width: 100%;
+}
+
+.main3 li .itemBrand{
+    color: rgb(26, 26, 26);
+    margin-bottom: 5px;
+}
+
+.main3 li .itemTitle{
+    color: black;
+    margin-bottom: 5px;
+}
+
+.main3 li .itemPrice{
+    color: black;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.main3 li .itemPrice span{         
+    display: inline-block;             
+    margin-top: 5px;
+    vertical-align: top;
+}
+
+ /* span 태그는 인라인 블럭요소 (수평배열) 이므로 margin, padding 을 위아래로 줄 수 없음 
+    그래서 인라인 블럭요소를 margin, padding 을 주고 싶다면 vertical-align을 주면 됌 */
+
+.more{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.more a{
+    padding-right: 16px;
+    color: black;
+    background-image: url(../img/icon_plus.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.more a span{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.main4{
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.main4 ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main4 li{
+    width: 380px;
+    position: relative
+}
+
+.main4 .m4Txt{
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgb(22, 22, 22);
+}
+
+.footer{
+    padding-bottom: 50px;
+}
+
+.footer .footerIn{
+    width: 1200px;
+    margin: 0px auto;
+    margin-top: 30px;
+    display: flex;
+}
+
+.fLeft .fMenu ul{
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.fLeft .fMenu li{
+    margin-right: 10px;
+}
+
+.fMenu li a{
+    color: black;
+}
+
+.fMenu .point a{
+    color: hotpink;
+}
+
+.fInfo a{
+    color: black;
+}
+
+.fInfo .bar{
+    font-size: 9px;
+    color: gray;
+}
+
+.footerIn .kg{
+    margin-left: 220px;
+}
+
+.kg .kg2{
+    padding-top: 50px;
+    margin-bottom: 15px;
+    background-image: url(../img/inicis.png);
+    background-repeat: no-repeat;
+}
+
+.kg3 a{
+    color: black;
+    padding-right: 13px;
+    background-image: url(../img/arrow01.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.kg .kg3 span{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 8px;
+}

@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+    color: rgb(19, 19, 19);
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: top;
+    border: 0;
+}
+
+.wrap{
+    width: 100%;
+    min-width: 1200px;
+}
+
+.header{
+    height: 80px;
+}
+
+.headerin{
+    width: 1200px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gnb ul{
+    display: flex;
+}
+
+.gnb li{
+    margin-right: 50px;
+}
+
+.gnb li a{
+    color: rgb(19, 19, 19);
+    font-size: 18px;
+}
+
+.gnb li a:hover{
+    color: red;
+}
+
+.member ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.member li{
+    margin-left: 15px;
+}
+
+.member li a{
+    color: rgb(19, 19, 19); 
+}
+
+.member li a:hover{
+    text-decoration: underline;
+}
+
+.main1{
+    height: 480px;
+    background-color: aqua;
+    margin-bottom: 50px;
+    position: relative;
+    /* .main1의 공간 밖의 내용을 보이지 않게 설정함  */
+    overflow: hidden;
+}
+
+.main1img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -800px;
+}
