@@ -49,5 +49,7 @@ ___
 ** 이미지
 
 ![메세지](이미지경로)
+![mainBn31](https://user-images.githubusercontent.com/120345841/206955604-fa7dd0e6-f0d9-4068-b011-34121cb968e7.jpg)
+
 
 **내용**
